@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIEL MULINDO NZIOKI | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+    <!-- Header Section -->
+    <header class="hero">
+    <div class="container">
+        <h1 class="gradient-name">DANIEL MULINDO NZIOKI</h1>
+        <p class="tagline">Web Developer & Designer</p>
+        <a href="#projects" class="cta-button">View My Work ↓</a>
+    </div>
+</header>
+<!-- Slideshow Section -->
+<section id="home" class="slideshow" >
+  <div class="slide active" style="background-image: url('pics/slide1.jpg');" ></div>
+  <div class="slide" style="background-image: url('pics/slide2.jpg');"></div>
+  <div class="slide" style="background-image: url('pics/slide3.jpg');"></div>
+  <div class="container">
+    <!-- Your content here -->
+   <marquee> <h2>This is me,young, handsome and inspired guy with a skilled and genius mindset.</h2></marquee>
+  </div>
+</section>
+
+    <!-- About Me Section -->
+  
+            <section class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <swan><img src="pics/me.jpg" alt="Daniel Mulindo"></swan>
+    </div>
+    <div class="about-content">
+      <h2>About Me:</h2>
+            <p>Hi, I'm <i>Daniel Mulindo</i> again — a beginner in tech, actively learning and building my path toward becoming a
+                great software developer.
+
+I'm currently exploring areas like web development, automation, and AI, while working on small personal projects
+ to grow my skills. <br>I recently started learning tools like Firebase, n8n, Genkit, Flutter, and OpenAI, and I'm <br>
+ passionate about using tech to solve real-world problems, especially in the environment and education sectors.<br><br>
+
+<h3><i> What Drives Me</i></h3><br>
+
+I believe technology is a powerful tool for change.<br>
+
+I’m curious, creative, and committed to learning.<br>
+
+I’m not just learning to code — I’m learning to build impact.<br><br>
+
+<h3><i>Tools I'm Exploring</i><br></h3>
+
+Web Development: HTML, CSS, JavaScript<br>
+
+Mobile & Backend: Flutter, Firebase<br>
+
+Automation & AI: n8n, Genkit, OpenAI<br>
+
+Other: GitHub, Figma, Google Developer Tools<br><br>
+
+<h3><i>My Goals</i><br></h3>
+
+Build and launch my first working MVP (Smart Tree Tracker )<br>
+
+Learn full-stack development step by step<br>
+
+Connect with other developers, creators, and mentors<br>
+
+Start freelancing or join internships as I grow<br><br>
+I really appreciate the entire Power Learn Project Community, IHUB Kenya, My Brother Derick and all guys I'm networking with on this journey for making it possible and enjoyable for me. I'm moving with a family.
+
+
+
+            </p>
+            <div class="resume-section">
+                <a href="doc/ESTHER TERA TOURISM CURICILLUM VITAE^.docx" download class="download-btn" alt="center">Download My CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="show"> <!-- Added show class -->
+        <div class="container">
+            <h2>My Projects:</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="pics/project3.jpg" alt="Smart Tree Tracker" height="340px" width="600px">
+                    <h3><a href="">Smart Tree Tracker</h3>
+                    <p>A system to monitor and track tree growth and environmental impact.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="pics/project1.jpg" alt="WiFi Management System" height="340px" width="600px">
+                    <h3>WiFi Management System</h3>
+                    <p>Simplified WiFi access control system for account management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+    <div class="container">
+        <h2>Contact Me: </h2>
+        <form class="contact-form" action="https://formspree.io/f/mvgqayap" method="POST">
+            <!-- Success/Error Messages -->
+            <div class="form-message success">
+                Message sent successfully! I'll reply soon.
+            </div>
+            <div class="form-message error">
+                Oops! Something went wrong. Please try again.
+            </div>
+
+            <!-- Form Fields -->
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required 
+                       pattern="[A-Za-z ]{3,}" title="Minimum 3 letters">
+                <span class="validation-icon"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <span class="validation-icon"></span>
+            </div>
+            
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" rows="5" required 
+                          minlength="20"></textarea>
+                <span class="validation-icon"></span>
+                
+            </div>
+
+            <!-- Hidden Fields -->
+            <input type="hidden" name="_subject" value="New Message from Portfolio">
+            <input type="text" name="_gotcha" style="display:none"> <!-- Anti-spam -->
+
+            <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="loading-dots">...</span>
+            </button>
+        </form>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+               <a href="https://github.com/Epic-hub701" target="_blank"><img src="images/Github-Dark.webp" alt="GitHub"></a>
+               <a href="https://www.linkedin.com/in/daniel-nzioki-179937375?"target="_blank"><img src="images/linkedin.webp" alt="LinkedIn"></a>
+                <a href="https://wa.me/254740130050" target="_blank"><img src="images/whatsapp.webp" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/__epic_hunter_/#" target="_blank"><img src="images/instagram.webp" alt="instagram"></a>
+            </div>
+            <p>&copy; 2024 Daniel's portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

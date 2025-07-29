@@ -1,0 +1,478 @@
+:root {
+    --primary: #FF6B35;  /* Vibrant orange */
+    --primary-dark: #E05A2C;
+    --secondary: #FFD166; /* Complementary yellow */
+    --dark: #292F36;     /* Dark blue-gray */
+    --light: #F7FFF7;    /* Clean white */
+    /* Change colors in :root */
+    --success: #2ecc71;
+    --error: #e74c3c;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Slideshow Styles */
+.slideshow {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes slideShow {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  33% { opacity: 1; }
+  53% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide:nth-child(1) {
+  animation: slideShow 9s infinite;
+}
+.slide:nth-child(2) {
+  animation: slideShow 9s infinite 3s;
+}
+.slide:nth-child(3) {
+  animation: slideShow 9s infinite 6s;
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin: 20px 0 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: var(--primary-dark);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-image {
+  flex: 0 0 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  flex: 1;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+/* Projects Grid */
+/* Project Card Styles */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 4/3; /* Maintains 4:3 ratio */
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+  transform: scale(1.05);
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card h3 {
+    padding: 20px 15px 10px;
+    text-align: center;
+}
+
+.project-card p {
+    padding: 0 15px 20px;
+    text-align: center;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--light);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== Gradient Name Effect ===== */
+.gradient-name {
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #FF6B35 0%, #FFD166 50%, #4ECDC4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.gradient-name::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(90deg, #FF6B35, #4ECDC4);
+  border-radius: 2px;
+}
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== Modern Header Shape ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 12s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+/* Form Validation Styles */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF6B35"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input:valid + .validation-icon,
+textarea:valid + .validation-icon {
+    opacity: 1;
+}
+
+input:invalid:focus, 
+textarea:invalid:focus {
+    border-color: #FF6B35;
+}
+
+/* Form Messages */
+.form-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.success {
+    background: rgba(46, 204, 113, 0.2);
+    border-left: 4px solid #2ecc71;
+    color: #27ae60;
+}
+
+.error {
+    background: rgba(231, 76, 60, 0.2);
+    border-left: 4px solid #e74c3c;
+    color: #c0392b;
+}
+
+/* Loading Animation */
+.loading-dots {
+    display: none;
+    animation: dotPulse 1.5s infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Form Submission States */
+.form-submitting .btn-text {
+    display: none;
+}
+.form-submitting .loading-dots {
+    display: inline-block;
+}
+
+.form-success .success,
+.form-error .error {
+    display: block;
+}
+/* Message Animation */
+.form-message {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin: 0;
+    padding: 0 15px;
+}
+
+/* Show message when :target or [hidden] removed */
+#form-submitted .success,
+.form-message:not([hidden]) {
+    opacity: 1;
+    max-height: 100px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Auto-hide animation */
+.form-message:not([hidden]) {
+    animation: hideMessage 1s ease forwards;
+    animation-delay: var(--delay, 5s);
+}
+
+@keyframes hideMessage {
+    to {
+        opacity: 0;
+        max-height: 0;
+        padding: 0 15px;
+        margin: 0;
+    }
+}
